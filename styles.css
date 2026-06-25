@@ -23,7 +23,7 @@ html {
 body {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  color: var(--ink);
+  color: var(--cream);
   background: var(--navy-dark);
   line-height: 1.7;
 }
@@ -317,6 +317,24 @@ h3 {
 .section p {
   color: #33404d;
   font-size: 1.08rem;
+}
+
+.section:not(.section-light) h2,
+.section:not(.section-light) h3 {
+  color: #f7f1e6;
+}
+
+.section:not(.section-light) p,
+.section:not(.section-light) .simple-list li {
+  color: #f5ead6;
+}
+
+.section:not(.section-light) a {
+  color: #f6deb1;
+}
+
+.section:not(.section-light) .simple-list li::before {
+  border-color: var(--gold-soft);
 }
 
 .simple-list {
