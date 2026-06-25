@@ -149,18 +149,21 @@ a {
   align-items: center;
   justify-content: center;
   padding: 28px;
-  background: rgba(255, 250, 242, 0.96);
-  border: 1px solid rgba(223, 207, 173, 0.75);
-  border-radius: 28px;
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.24);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .hero-logo {
   display: block;
   width: 100%;
-  max-width: 270px;
+  max-width: 290px;
   height: auto;
-  border-radius: 50%;
+  border-radius: 0;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
+}
+
 }
 
 .hero-content {
