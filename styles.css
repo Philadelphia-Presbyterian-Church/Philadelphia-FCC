@@ -104,12 +104,12 @@ a {
   position: relative;
   overflow: hidden;
   min-height: 720px;
-  padding: 105px 0 95px;
+  padding: 92px 0 88px;
   display: flex;
   align-items: center;
   color: var(--white);
   background:
-    linear-gradient(115deg, rgba(22, 34, 53, 0.98), rgba(32, 48, 71, 0.93) 52%, rgba(63, 72, 86, 0.62)),
+    linear-gradient(115deg, rgba(22, 34, 53, 0.98), rgba(32, 48, 71, 0.94) 52%, rgba(63, 72, 86, 0.66)),
     linear-gradient(135deg, #203047 0%, #37465d 100%);
 }
 
@@ -138,45 +138,37 @@ a {
 .hero-layout {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 275px 1fr;
-  align-items: center;
-  gap: 50px;
 }
 
-.hero-logo-card {
+.hero-content {
+  max-width: 930px;
+}
+
+.hero-brand-lockup {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
+  gap: clamp(18px, 4vw, 36px);
+  margin-bottom: 42px;
 }
 
 .hero-logo {
   display: block;
-  width: 100%;
-  max-width: 250px;
+  width: clamp(138px, 22vw, 245px);
   height: auto;
+  flex: 0 0 auto;
   border-radius: 0;
   filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
 }
 
-.hero-content {
-  max-width: 740px;
-}
-
 .eyebrow {
   display: inline-block;
-  margin: 0 0 18px;
-  padding: 7px 13px;
+  margin: 0 0 34px;
+  padding: 9px 28px;
   color: #f4e6c8;
-  border: 1px solid rgba(223, 207, 173, 0.42);
+  border: 1px solid rgba(223, 207, 173, 0.58);
   border-radius: 999px;
-  font-size: 0.78rem;
-  letter-spacing: 0.13em;
+  font-size: 0.88rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
@@ -188,46 +180,84 @@ h3 {
 }
 
 .hero h1 {
-  max-width: 760px;
+  max-width: 680px;
   margin: 0;
   color: var(--white);
-  font-size: clamp(3rem, 6vw, 5.4rem);
+  font-size: clamp(3.25rem, 7.4vw, 6.4rem);
+  line-height: 0.95;
   letter-spacing: -0.055em;
 }
 
 .hero-subtitle {
-  max-width: 680px;
-  margin: 24px 0 0;
+  max-width: 820px;
+  margin: 0;
   color: #f5ead6;
-  font-size: clamp(1.18rem, 2.1vw, 1.48rem);
+  font-size: clamp(1.45rem, 3.6vw, 2.25rem);
+  line-height: 1.45;
 }
 
 .service-time {
-  width: fit-content;
-  margin-top: 34px;
-  padding: 18px 22px;
-  background: rgba(255, 250, 242, 0.1);
-  border: 1px solid rgba(223, 207, 173, 0.38);
-  border-radius: 14px;
+  position: relative;
+  width: min(760px, 100%);
+  margin-top: 58px;
+  padding: 36px 42px;
+  overflow: hidden;
+  background: rgba(255, 250, 242, 0.08);
+  border: 1px solid rgba(223, 207, 173, 0.55);
+  border-radius: 24px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.14);
+}
+
+.service-time::after {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 220px;
+  right: -160px;
+  top: 34px;
+  border-top: 2px solid rgba(223, 207, 173, 0.25);
+  border-radius: 50%;
+  transform: rotate(-14deg);
 }
 
 .service-time strong,
 .service-time span {
+  position: relative;
+  z-index: 1;
   display: block;
 }
 
 .service-time strong {
   color: #f6deb1;
-  font-size: 0.92rem;
-  letter-spacing: 0.08em;
+  font-size: clamp(1rem, 2.8vw, 1.65rem);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
+.service-time strong::after {
+  content: "";
+  display: block;
+  width: min(420px, 100%);
+  height: 1px;
+  margin: 18px 0 22px;
+  background: rgba(223, 207, 173, 0.5);
+}
+
 .service-time span {
-  margin-top: 3px;
   color: var(--white);
-  font-size: 1.4rem;
+  font-size: clamp(2.2rem, 6.6vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.service-time p {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  margin: 34px 0 0;
+  color: #f5ead6;
+  font-size: clamp(1.24rem, 3.4vw, 2rem);
+  line-height: 1.45;
 }
 
 .hero-buttons {
@@ -420,16 +450,7 @@ h3 {
 
   .hero {
     min-height: auto;
-    padding: 82px 0 76px;
-  }
-
-  .hero-layout {
-    grid-template-columns: 1fr;
-    gap: 34px;
-  }
-
-  .hero-logo-card {
-    width: min(260px, 100%);
+    padding: 70px 0 76px;
   }
 
   .belief-grid {
@@ -460,45 +481,56 @@ h3 {
   }
 
   .hero {
-    padding: 42px 0 54px;
+    padding: 52px 0 64px;
   }
 
-  .hero-layout {
-    gap: 28px;
-  }
-
-  .hero-logo-card {
-    width: 100%;
-    padding: 0;
+  .hero-brand-lockup {
+    gap: 18px;
+    margin-bottom: 32px;
   }
 
   .hero-logo {
-    max-width: 190px;
+    width: 134px;
   }
 
   .eyebrow {
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
     line-height: 1.6;
-    padding: 7px 16px;
+    padding: 8px 14px;
+    margin-bottom: 34px;
   }
 
   .hero h1 {
-    font-size: 2.35rem;
-    line-height: 1.05;
+    font-size: clamp(3.05rem, 13vw, 4.4rem);
+    line-height: 0.96;
   }
 
   .hero-subtitle {
-    font-size: 1.08rem;
-    line-height: 1.55;
-    margin-top: 20px;
+    font-size: clamp(1.56rem, 6.2vw, 2rem);
+    line-height: 1.45;
   }
 
   .service-time {
-    margin-top: 26px;
+    margin-top: 54px;
+    padding: 34px 34px 38px;
+    border-radius: 24px;
   }
 
-  .service-time,
+  .service-time strong {
+    font-size: 1.25rem;
+  }
+
+  .service-time span {
+    font-size: clamp(2.35rem, 10.5vw, 3.4rem);
+  }
+
+  .service-time p {
+    font-size: clamp(1.28rem, 5.3vw, 1.72rem);
+  }
+
   .hero-buttons,
   .button {
     width: 100%;
@@ -515,5 +547,23 @@ h3 {
   .belief-card,
   .visit-card {
     padding: 24px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-logo {
+    width: 112px;
+  }
+
+  .hero-brand-lockup {
+    gap: 14px;
+  }
+
+  .hero h1 {
+    font-size: 2.68rem;
+  }
+
+  .service-time {
+    padding: 30px 24px 34px;
   }
 }
