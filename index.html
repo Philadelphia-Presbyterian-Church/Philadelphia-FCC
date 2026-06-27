@@ -36,6 +36,82 @@
       margin-top: 24px;
     }
 
+    .sermons-section .container::after,
+    .sermons-section::after {
+      display: none;
+      content: none;
+    }
+
+    .resources-section,
+    .announcements-section {
+      scroll-margin-top: 110px;
+    }
+
+    .resources-intro {
+      margin-bottom: 34px;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 36px;
+    }
+
+    .resource-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 30px;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--gold);
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(22, 34, 53, 0.16);
+    }
+
+    .resource-card h3 {
+      margin: 0 0 12px;
+      color: var(--navy-dark);
+      font-size: 1.18rem;
+    }
+
+    .resource-card p {
+      color: #33404d;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .resource-card p:last-child {
+      margin-top: auto;
+      margin-bottom: 0;
+      padding-top: 14px;
+    }
+
+    .resource-card a {
+      color: var(--navy-dark);
+      font-weight: 700;
+      text-decoration-color: var(--gold);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 5px;
+    }
+
+    .resource-card a:hover,
+    .resource-card a:focus {
+      color: #7b5b2c;
+    }
+
+    .announcements-section .narrow {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @media (max-width: 950px) {
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 850px) {
       .visit-layout {
         grid-template-columns: 1fr;
@@ -49,6 +125,10 @@
     @media (max-width: 620px) {
       .visit-photo {
         min-height: 260px;
+      }
+
+      .resource-card {
+        padding: 24px;
       }
     }
   </style>
@@ -261,7 +341,6 @@ Psalm 122:1
           We seek simplicity, reverence, and faithfulness in all elements of worship.
         </p>
 
-        
         <p>
           *Baptism is administered as needed to new converts and to the children of
           believers. The Lord's Supper is observed quarterly during designated
@@ -334,64 +413,50 @@ Psalm 122:1
           />
           Follow Us on Facebook
         </a>
-
-        <span id="announcements" aria-hidden="true" style="display: block; height: 0; scroll-margin-top: 110px;"></span>
       </div>
     </section>
 
-    <section id="resources" class="section section-light">
+    <section id="resources" class="section section-light resources-section">
       <div class="container">
-        <div class="narrow">
+        <div class="narrow resources-intro">
           <h2>Resources</h2>
           <p>
             Explore these resources to learn more about our denomination, the work of the U.S. Presbytery, and other preaching stations.
           </p>
         </div>
 
-        <div class="belief-grid">
-          <div class="belief-card">
+        <div class="resource-grid">
+          <div class="resource-card">
             <h3>Preaching Stations</h3>
             <p>
               Locations and information for the preaching stations of the U.S. Presbytery of the Free Church of Scotland (Continuing).
             </p>
             <p>
-              <a
-                href="https://www.westminsterconfession.org/congregations/preaching-stations/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.westminsterconfession.org/congregations/preaching-stations/" target="_blank" rel="noopener noreferrer">
                 View Preaching Stations
               </a>
             </p>
           </div>
 
-          <div class="belief-card">
+          <div class="resource-card">
             <h3>U.S. Presbytery</h3>
             <p>
               The official website of the U.S. Presbytery of the Free Church of Scotland (Continuing).
             </p>
             <p>
-              <a
-                href="https://www.westminsterconfession.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.westminsterconfession.org/" target="_blank" rel="noopener noreferrer">
                 Visit U.S. Presbytery Website
               </a>
             </p>
           </div>
 
-          <div class="belief-card">
+          <div class="resource-card">
             <h3>Denominational Website</h3>
             <p>
               The official website of the Free Church of Scotland (Continuing), with sermons, articles, church information, and denominational resources.
             </p>
             <p>
-              <a
-                href="https://www.freechurchcontinuing.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.freechurchcontinuing.org/" target="_blank" rel="noopener noreferrer">
                 Visit Denominational Website
               </a>
             </p>
@@ -400,43 +465,48 @@ Psalm 122:1
       </div>
     </section>
 
+    <section id="announcements" class="section announcements-section">
+      <div class="container narrow">
+        <h2>Announcements</h2>
+        <p>
+          Stay informed with the latest updates and important information for the congregation.
+        </p>
+      </div>
+    </section>
+
     <section id="visit" class="section section-light">
       <div class="container">
-
-          
-
         <div class="visit-content">
-            <h2>Visit Us</h2>
+          <h2>Visit Us</h2>
+
+          <p>
+            We would be delighted to welcome you to worship with us.
+          </p>
+
+          <div class="visit-card">
+            <h3>Lord's Day Schedule</h3>
 
             <p>
-              We would be delighted to welcome you to worship with us.
+              <strong>11:00 AM</strong> Morning Worship<br />
+              Lunch is served after morning worship, followed by Sabbath School.<br />
+              <strong>2:30 PM</strong> Afternoon Worship
             </p>
 
-            <div class="visit-card">
-              <h3>Lord's Day Schedule</h3>
+            <h3>Location</h3>
 
-              <p>
-                <strong>11:00 AM</strong> Morning Worship<br />
-                Lunch is served after morning worship, followed by Sabbath School.<br />
-                <strong>2:30 PM</strong> Afternoon Worship
-              </p>
+            <p>
+              1215 Union Meeting Road<br />
+              Blue Bell, PA 19422
+            </p>
 
-              <h3>Location</h3>
-
-              <p>
-                1215 Union Meeting Road<br />
-                Blue Bell, PA 19422
-              </p>
-
-              <a
-                class="button secondary"
-                href="https://www.google.com/maps/search/?api=1&query=1215+Union+Meeting+Road+Blue+Bell+PA+19422"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get Directions
-              </a>
-            </div>
+            <a
+              class="button secondary"
+              href="https://www.google.com/maps/search/?api=1&query=1215+Union+Meeting+Road+Blue+Bell+PA+19422"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get Directions
+            </a>
           </div>
         </div>
       </div>
