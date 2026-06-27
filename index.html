@@ -36,14 +36,7 @@
       margin-top: 24px;
     }
 
-    .sermons-section .container::after,
-    .sermons-section::after {
-      display: none;
-      content: none;
-    }
-
-    .resources-section,
-    .announcements-section {
+    .resources-section {
       scroll-margin-top: 110px;
     }
 
@@ -53,7 +46,7 @@
 
     .resource-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 22px;
       margin-top: 36px;
     }
@@ -101,15 +94,18 @@
       color: #7b5b2c;
     }
 
-    .announcements-section .narrow {
-      margin: 0 auto;
-      text-align: center;
+    .resource-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    @media (max-width: 950px) {
-      .resource-grid {
-        grid-template-columns: 1fr;
-      }
+    .resource-link-icon {
+      display: block;
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+      flex: 0 0 auto;
     }
 
     @media (max-width: 850px) {
@@ -146,9 +142,7 @@
         <a href="#welcome">About</a>
         <a href="#beliefs">Beliefs</a>
         <a href="#worship">Worship</a>
-        <a href="#sermons">Sermons</a>
         <a href="#resources">Resources</a>
-        <a href="#announcements">Announcements</a>
         <a href="#visit">Visit</a>
       </nav>
     </div>
@@ -178,7 +172,14 @@ Psalm 122:1
 
           <div class="hero-buttons">
             <a class="button primary" href="#visit">Plan Your Visit</a>
-            <a class="button secondary" href="#sermons">Listen to Sermons</a>
+            <a
+              class="button secondary"
+              href="https://youtube.com/@philadelphiapresbyterianchurch?si=EOnLud4_4hVzVGzC"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Listen to Sermons
+            </a>
           </div>
         </div>
       </div>
@@ -375,53 +376,12 @@ Psalm 122:1
       </div>
     </section>
 
-    <section id="sermons" class="section sermons-section">
-      <div class="container narrow center">
-        <h2>Sermons</h2>
-
-        <img
-          src="youtube-play.svg"
-          alt="YouTube play button"
-          class="sermons-icon"
-        />
-
-        <p>
-          Watch past and recent sermons on our YouTube channel
-        </p>
-
-        <a
-          class="button primary"
-          href="https://youtube.com/@philadelphiapresbyterianchurch?si=EOnLud4_4hVzVGzC"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Listen to Sermons
-        </a>
-
-        <a
-          class="button primary"
-          href="https://www.facebook.com/share/1ASgLXoGCP/?mibextid=wwXIfr"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="gap: 10px; margin-top: 18px; min-width: min(100%, 360px);"
-        >
-          <img
-            src="facebook-icon.svg"
-            alt=""
-            aria-hidden="true"
-            style="display: block; width: 28px; height: 28px; border: 0;"
-          />
-          Follow Us on Facebook
-        </a>
-      </div>
-    </section>
-
     <section id="resources" class="section section-light resources-section">
       <div class="container">
         <div class="narrow resources-intro">
           <h2>Resources</h2>
           <p>
-            Explore these resources to learn more about our denomination, the work of the U.S. Presbytery, and other preaching stations.
+            Explore these resources to learn more about our denomination, the work of the U.S. Presbytery, sermons, and other church updates.
           </p>
         </div>
 
@@ -461,16 +421,33 @@ Psalm 122:1
               </a>
             </p>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="announcements" class="section announcements-section">
-      <div class="container narrow">
-        <h2>Announcements</h2>
-        <p>
-          Stay informed with the latest updates and important information for the congregation.
-        </p>
+          <div class="resource-card">
+            <h3>YouTube Channel</h3>
+            <p>
+              Watch past and recent sermons from Philadelphia Presbyterian Church.
+            </p>
+            <p>
+              <a class="resource-link" href="https://youtube.com/@philadelphiapresbyterianchurch?si=EOnLud4_4hVzVGzC" target="_blank" rel="noopener noreferrer">
+                <img src="youtube-play.svg" alt="" aria-hidden="true" class="resource-link-icon" />
+                Visit YouTube Channel
+              </a>
+            </p>
+          </div>
+
+          <div class="resource-card">
+            <h3>Facebook Page</h3>
+            <p>
+              Follow our Facebook page for church updates and other important information.
+            </p>
+            <p>
+              <a class="resource-link" href="https://www.facebook.com/share/1ASgLXoGCP/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                <img src="facebook-icon.svg" alt="" aria-hidden="true" class="resource-link-icon" />
+                Visit Facebook Page
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
