@@ -108,6 +108,31 @@
       flex: 0 0 auto;
     }
 
+    .scripture-callout {
+      margin: 2rem 0;
+      padding: 2rem;
+      background: #f8f7f2;
+      border-left: 5px solid var(--gold);
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(22, 34, 53, 0.08);
+    }
+
+    .scripture-callout p {
+      margin: 0;
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.7;
+      text-transform: uppercase;
+      color: var(--navy-dark);
+    }
+
+    .scripture-callout footer {
+      margin-top: 1rem;
+      font-style: italic;
+      color: #666;
+    }
+
     @media (max-width: 850px) {
       .visit-layout {
         grid-template-columns: 1fr;
@@ -125,6 +150,14 @@
 
       .resource-card {
         padding: 24px;
+      }
+
+      .scripture-callout {
+        padding: 1.5rem;
+      }
+
+      .scripture-callout p {
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -380,27 +413,26 @@ Psalm 122:1
       <div class="container narrow">
         <h2>Our Worship</h2>
 
-        <p>
-          Our worship seeks to follow the pattern given in Scripture.
-        </p>
-
-        <p>Each Lord's Day gathering includes:</p>
-
-        <ul class="simple-list">
-          <li>The reading of God's Word</li>
-          <li>The experiential preaching of God's Word</li>
-          <li>Prayer</li>
-          <li>Congregational singing of the Psalms without instrumental accompaniment</li>
-          <li>*The administration of the sacraments: Baptism and the Lord's Supper*</li>
-        </ul>
+        <blockquote class="scripture-callout">
+          <p>
+            “WHAT THING SOEVER I COMMAND YOU, OBSERVE TO DO IT:
+            THOU SHALT NOT ADD THERETO, NOR DIMINISH FROM IT."
+          </p>
+          <footer>Deuteronomy 12:32</footer>
+        </blockquote>
 
         <p>
-          We seek simplicity, reverence, and faithfulness in all elements of worship.
+          We believe that Holy Scripture alone determines how God is to be worshiped.
+          Accordingly, the reading and preaching of God’s Word are central to our
+          public worship.
         </p>
 
-        <p>*As a preaching station, the administration of the sacraments is subject to the discretion of the Session.*
-
-         </p>
+        <p>
+          We offer praise by singing the inspired Psalms of Scripture alone,
+          believing them to be the hymnbook God has appointed for His Church.
+          In keeping with the New Testament practice of worshiping from the heart,
+          we sing without the accompaniment of musical instruments.
+        </p>
       </div>
     </section>
 
